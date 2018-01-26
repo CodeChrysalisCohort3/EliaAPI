@@ -15,9 +15,9 @@ solo project
 # Basic Requirements
 - A script that will set up and seed a database
 - An Express server that:
- - serves up a basic HTML file that describes your API service
- - has a create endpoint for adding to your database (POST)
- - has a read endpoint for reading from your database (GET)
+     - serves up a basic HTML file that describes your API service
+     - has a create endpoint for adding to your database (POST)
+     - has a read endpoint for reading from your database (GET)
  - has an update endpoint for editing to your database (EDIT)
  - has a delete endpoint for deleting from your database (DELETE)
 - A basic HTML file that gets served up. It should have the name of your API and link to your API's GitHub folder
