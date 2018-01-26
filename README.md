@@ -1,5 +1,5 @@
-# EliaAPI
-solo project
+# Elia's API Solo Project
+Project completed in January 2018. 
 
 # Objectives
 - Create a CRUD API service using Express, Knex, and Postgres
@@ -18,8 +18,8 @@ solo project
      - serves up a basic HTML file that describes your API service
      - has a create endpoint for adding to your database (POST)
      - has a read endpoint for reading from your database (GET)
- - has an update endpoint for editing to your database (EDIT)
- - has a delete endpoint for deleting from your database (DELETE)
+     - has an update endpoint for editing to your database (EDIT)
+     - has a delete endpoint for deleting from your database (DELETE)
 - A basic HTML file that gets served up. It should have the name of your API and link to your API's GitHub folder
 - Migration files
 - Tests with usage of test-doubles
