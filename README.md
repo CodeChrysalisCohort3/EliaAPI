@@ -28,3 +28,6 @@ Project completed in January 2018.
 
 # Advanced Requirements
 - Deployed on Heroku (optional)
+
+# Setup
+
