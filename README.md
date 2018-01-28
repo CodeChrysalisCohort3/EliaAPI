@@ -34,6 +34,7 @@ Project completed in January 2018.
 - Git clone repo from github located here:
   - https://github.com/CodeChrysalisCohort3/eliapi.git
 - Install node and yarn if you don't have it already in terminal with command:
+  - `brew install yarn`
 
 - Install knex with command: 
   - `yarn i knex -g`
@@ -41,7 +42,7 @@ Project completed in January 2018.
 - Install postgres for PSQL with command: 
   - `yarn install pg`
 
-- Install dependencies/
+- Install dependencies:
   - `yarn i`
 
 - Setup folder structure shown in cloned repo.
@@ -78,7 +79,7 @@ Project completed in January 2018.
     "id": #,
     "name": "testName"
 }`
-- Now go back into PSQL and view the table and see if the value is updated.
+- Now go back into PSQL and view the table and see if the value is created.
 
 # READ (also known as GET)
 - Change tab on left to GET
@@ -105,7 +106,7 @@ Project completed in January 2018.
 - In the body field, put a test object like below and make sure you are referencing a valid table entry:
   - `{"OldName": "lowervalue", "newName": "TESTvalue"}`
 - Click on "SEND" on top right when ready.
-- If updated correctly, the response text below in Postman will say "[object Object] is updated".
+- If updated correctly, the response text below in Postman will say `"[object Object] is updated"`.
 - Now go back into PSQL and view the table and see if the value is updated.
 
 # DELETE
@@ -114,5 +115,5 @@ Project completed in January 2018.
 - In the body field, put a test object like below and make sure you are referencing a valid table entry:
   - `{"name": "insertedvalue"}`
 - Click on "SEND" on top right when ready.
-- If deleted correctly, the response text below in Postman will say "insertedvalue is deleted".
+- If deleted correctly, the response text below in Postman will say `"insertedvalue is deleted"`.
 - Now go back into PSQL and view the table and see if the value is deleted.
