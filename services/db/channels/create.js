@@ -10,12 +10,12 @@ module.exports = (knex, Channel) => (params) => {
   })
     .then(() => {
      // console.log('channels insert thennnnnnn', channelname);
-    return knex('channels').insert({ name: channelname.toLowerCase() });
+    return knex('channels').insert({ name: channelname });
     })
     .then(() => { 
      // console.log('channels sELECT', channelname);
       return knex('channels')
-      .where({ name: channelname.toLowerCase() })
+      .where({ name: channelname })
       .select();
     })
     .then(channels => {

@@ -10,24 +10,14 @@ module.exports = (knex, Channel) => (params) => {
   })
     .then(() => {
      // console.log('channels insert thennnnnnn', channelname);
-    return knex('channels').where("name", channelname.toLowerCase()).del();
+    return knex('channels').where("name", channelname).del();
     })
-    // .then(() => { 
-    //  // console.log('channels sELECT', channelname);
-    //   return knex('channels')
-    //   .where({ name: channelname.toLowerCase() })
-    //   .select();
-    // })
     .then(deletedRows => {
       if(deletedRows === 0) {
         throw "no deleted rows returned";
       }
       return channelname;
     })
-    // .then(channels => {
-    // //  console.log('channels pop ELEMENT', channelname);
-    //   return new Channel(channels.pop());
-    // })
     .catch((err) => {
      // console.log('channels ERROR duplicate key', channelname);
       if (err) throw err;
