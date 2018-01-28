@@ -32,33 +32,33 @@ Project completed in January 2018.
 
 # Setup
 - Git clone repo from github located here:
-https://github.com/CodeChrysalisCohort3/eliapi.git
+  - https://github.com/CodeChrysalisCohort3/eliapi.git
 - Install node and yarn if you don't have it already in terminal with command:
 
 - Install knex with command: 
-`yarn i knex -g`
+  - `yarn i knex -g`
 
 - Install postgres for PSQL with command: 
-`yarn install pg`
+  - `yarn install pg`
 
 - Install dependencies/
-`yarn i`
+  - `yarn i`
 
-- Setup folder structure shown in cloned repo/
--Add a migration file with command:
-`yarn knex migrate:make <filename>`
+- Setup folder structure shown in cloned repo.
+- Add a migration file with command:
+  - `yarn knex migrate:make <filename>`
 
 - Run a new migration file with command:
-`yarn run migrate`
+  - `yarn run migrate`
 
 - If need to rollback a migration (reverse a setup to previous one):
-`npm run rollback`
+  - `yarn run rollback`
 
 - Setup/run tests with command:
-`yarn test`
+  - `yarn test`
 
 - To run the app:
-`yarn start`
+  - `yarn start`
 
 
 # Running CRUD tests
@@ -71,10 +71,10 @@ https://github.com/CodeChrysalisCohort3/eliapi.git
 - Change tab on left to POST
 - In the body field below, select "raw" and drop down on right to "JSON (application/json)"
 - In the body field, put a test object like below and make sure you are referencing a valid table entry:
-  - {"name": "testName"}
+  - `{"name": "testName"}`
 - Click on "SEND" on top right when ready.
 - If updated correctly, the response text below in Postman will have object like this:
-`{
+  - `{
     "id": #,
     "name": "testName"
 }`
@@ -85,7 +85,7 @@ https://github.com/CodeChrysalisCohort3/eliapi.git
 - In the body field below, select "raw" and drop down on right to "JSON (application/json)"
 - Click on "SEND" on top right when ready.
 - If sent correctly, the response text below in Postman will have array of objects like below:
-`[
+  - `[
     {
         "id": 52,
         "name": "updatedvalue",
@@ -103,7 +103,7 @@ https://github.com/CodeChrysalisCohort3/eliapi.git
 - Change tab on left to PUT
 - In the body field below, select "raw" and drop down on right to "JSON (application/json)"
 - In the body field, put a test object like below and make sure you are referencing a valid table entry:
-`{"OldName": "lowervalue", "newName": "TESTvalue"}`
+  - `{"OldName": "lowervalue", "newName": "TESTvalue"}`
 - Click on "SEND" on top right when ready.
 - If updated correctly, the response text below in Postman will say "[object Object] is updated".
 - Now go back into PSQL and view the table and see if the value is updated.
@@ -112,7 +112,7 @@ https://github.com/CodeChrysalisCohort3/eliapi.git
 - Change tab on left to DELETE
 - In the body field below, select "raw" and drop down on right to "JSON (application/json)"
 - In the body field, put a test object like below and make sure you are referencing a valid table entry:
-`{"name": "insertedvalue"}`
+  - `{"name": "insertedvalue"}`
 - Click on "SEND" on top right when ready.
 - If deleted correctly, the response text below in Postman will say "insertedvalue is deleted".
 - Now go back into PSQL and view the table and see if the value is deleted.
