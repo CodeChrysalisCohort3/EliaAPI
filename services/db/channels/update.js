@@ -3,15 +3,15 @@ const validateNoteName = noteText => typeof noteText === 'string' && noteText.re
 const Promise = require('bluebird');
 
 module.exports = (knex, Channel) => (params) => {
-  const channelname = params.name.newName;
+  const channelname = params.name.newname;
   
-  console.log('channels PARAMS value', params.name.newName);
+  console.log('channels PARAMS value', params.name.newname);
   return Promise.resolve(() => {
     if (!validateNoteName(channelname)) throw new Error('Note must be provided, and be at least 1 character');
   })
     .then(() => {
-      console.log('params update UPDATE values', params.name.OldName, channelname);
-      return knex('channels').where("name", params.name.OldName).update("name", channelname);
+      console.log('params update UPDATE values', params.name.oldname, channelname);
+      return knex('channels').where("name", params.name.oldname).update("name", channelname);
     })
     .then(updatedRows => {
       if(updatedRows === 0) {

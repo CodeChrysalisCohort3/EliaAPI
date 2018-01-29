@@ -23,21 +23,21 @@ app.controller('MessagesController', ['$scope', '$http', function ($scope, $http
     });
   };
 
-  // $scope.signIn = function (e) {
-  //   //post the new user and then get all the existing users and channels
-  //   var postData = { username: $('#username-input')[0].value };
-  //   $http({
-  //     method: 'POST',
-  //     url: 'http://localhost:3000/api/users',
-  //     data: postData,
-  //     headers: {'Content-Type': 'application/json'}
-  //   }).then(function (response) {
-  //     $scope.usernameRecieved = true;
-  //     $scope.user = response.data;
-  //     getUsers();
-  //     getChannels();
-  //   });
-  // };
+  $scope.signIn = function (e) {
+    //post the new user and then get all the existing users and channels
+    var postData = { username: $('#username-input')[0].value };
+    $http({
+      method: 'POST',
+      url: 'http://localhost:3000/api/users',
+      data: postData,
+      headers: {'Content-Type': 'application/json'}
+    }).then(function (response) {
+      $scope.usernameRecieved = true;
+      $scope.user = response.data;
+      getUsers();
+      getChannels();
+    });
+  };
 
   //$scope.refreshUsers = () => getUsers();
   $scope.refreshChannels = () => getChannels();
